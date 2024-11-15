@@ -32,8 +32,8 @@ export default {
           login: this.login,
           password: this.password
         })
-        this.message = response.data.message
-        this.token = response.data
+        console.log(response.data)
+        localStorage.setItem('token', response.data)
       } catch (error) {
         this.message =
           'An error occurred: ' + (error.response ? error.response.data.message : error.message)

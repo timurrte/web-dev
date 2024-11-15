@@ -2,6 +2,7 @@
   <header class="header green">
     <h1>Login page</h1>
     <nav class="login">
+      <RouterLink to="/posts">Posts</RouterLink>
       <RouterLink to="/login">Login</RouterLink>
       <RouterLink to="/register">Register</RouterLink>
     </nav>
