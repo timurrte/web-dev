@@ -2,7 +2,6 @@
   <div class="greetings form">
     <h1 class="green">Login</h1>
 
-    <!-- Conditional rendering: Show login form only if not logged in -->
     <form v-if="!isLoggedIn" class="login-form" @submit.prevent="handleSubmit">
       <label for="login">Login</label>
       <input v-model="login" type="text" name="login" id="login" required />
@@ -11,7 +10,6 @@
       <input class="button" type="submit" value="Log in" />
     </form>
 
-    <!-- Show success message if logged in -->
     <p v-if="isLoggedIn" class="success-message">You have successfully logged in!</p>
     <p v-if="message" class="message">{{ message }}</p>
     <p v-if="token" class="token">JWT: {{ token }}</p>
@@ -28,7 +26,7 @@ export default {
       password: '',
       message: '',
       token: '',
-      isLoggedIn: false // New state variable to track login status
+      isLoggedIn: false
     }
   },
   methods: {
@@ -41,9 +39,8 @@ export default {
         console.log(response.data)
         localStorage.setItem('token', response.data)
 
-        // Update state after successful login
         this.token = response.data
-        this.isLoggedIn = true // Set to true to hide the form
+        this.isLoggedIn = true
       } catch (error) {
         alert(error)
         this.message =

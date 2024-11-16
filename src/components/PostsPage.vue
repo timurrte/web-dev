@@ -37,10 +37,8 @@ const fetchPosts = async () => {
   }
 }
 
-// Fetch posts on component mount
 onMounted(fetchPosts)
 
-// Function to remove the post from the list when deleted
 const removePost = (id) => {
   posts.value = posts.value.filter((post) => post.id !== id)
 }

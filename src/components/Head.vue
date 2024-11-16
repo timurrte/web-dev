@@ -17,17 +17,17 @@ export default {
 
 <style scoped>
 .header {
-  position: fixed; /* Fixes the header at the top of the page */
-  top: 0; /* Aligns it to the top */
-  left: 0; /* Aligns it to the left */
-  right: 0; /* Aligns it to the right */
-  height: 10vh; /* Sets height to 10% of the viewport height */
-  background-color: #333; /* Header background color */
-  display: flex; /* Flexbox for layout */
-  align-items: center; /* Vertically centers content */
-  justify-content: space-between; /* Distributes space between header elements */
-  z-index: 1000; /* Ensures it stays above other content */
-  padding: 0 20px; /* Adds some padding for aesthetics */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10vh;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  padding: 0 20px;
 }
 
 .login {
